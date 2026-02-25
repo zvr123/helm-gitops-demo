@@ -95,6 +95,8 @@ PART 5 — How ArgoCD Connects to GitHub
 
 Public Repository
 No credentials needed.
+$ This error means Argo CD already knows this repo, but with different credentials than what you're trying to use now.
+Repository '<https://github.com/zvr123/helm-gitops-demo.git>' added
 
 Private Repository
 Add using CLI:
@@ -107,16 +109,34 @@ Step 6 — Create dev Application
 -------------------------------
 
 Apply:
-$ kubectl apply -f dev-app.yaml
+$ kubectl apply -f envs/dev/dev-app.yaml
+application.argoproj.io/myapp-dev configured
+
 Verify:
 $ kubectl get applications -n argocd
+NAME         SYNC STATUS   HEALTH STATUS
+hello-app    Synced        Healthy
+myapp-dev    Unknown       Degraded
+myapp-prod   Synced        Degraded
+
 $ kubectl get pods -n dev
+NAME                              READY   STATUS    RESTARTS      AGE
+app-deployment-77cf88dc74-bvt9g   1/1     Running   4 (20m ago)   21d
+app-deployment-77cf88dc74-dbbwg   1/1     Running   4 (20m ago)   21d
+app-deployment-77cf88dc74-hb4v9   1/1     Running   4 (20m ago)   21d
+app-deployment-77cf88dc74-nl5wv   1/1     Running   4 (20m ago)   21d
+app-deployment-77cf88dc74-sss8w   1/1     Running   4 (20m ago)   21d
+
 
 PART 7 — Deploy Prod Application
 ----------------------------------
 
 Apply:
-$ kubectl apply -f prod-app.yaml
+$ kubectl apply -f envs/prod/prod-app.yaml
+application.argoproj.io/myapp-prod configured
 
 Verify:
 $ kubectl get pods -n prod
+No resources found in prod namespace.
+
+
