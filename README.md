@@ -137,6 +137,20 @@ application.argoproj.io/myapp-prod configured
 
 Verify:
 $ kubectl get pods -n prod
-No resources found in prod namespace.
 
+
+PART 8 — GitOps Reconciliation Demo
+--------------------------------------
+
+$ git add .
+$ git commit -m "scale dev to 2 replicas"
+$ git push origin dev
+
+$ kubectl get pods -n dev
+NAME                              READY   STATUS    RESTARTS      AGE
+app-deployment-77cf88dc74-bvt9g   1/1     Running   4 (89m ago)   22d
+app-deployment-77cf88dc74-dbbwg   1/1     Running   4 (89m ago)   22d
+app-deployment-77cf88dc74-hb4v9   1/1     Running   4 (89m ago)   22d
+app-deployment-77cf88dc74-nl5wv   1/1     Running   4 (89m ago)   22d
+app-deployment-77cf88dc74-sss8w   1/1     Running   4 (89m ago)   22d
 

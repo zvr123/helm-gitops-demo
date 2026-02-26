@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/zvr123/helm-gitops-demo.git
-    targetRevision: main
+    targetRevision: prod
     path: charts/myapp
     helm:
       valueFiles:

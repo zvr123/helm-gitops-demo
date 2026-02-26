@@ -7,3 +7,6 @@ image:
 service:
   type: ClusterIP
   port: 80
+
+serviceAccount:
+  name: myapp-prod
