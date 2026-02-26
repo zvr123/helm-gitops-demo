@@ -9,4 +9,5 @@ service:
   port: 80
 
 serviceAccount:
+  create: false
   name: myapp-prod
