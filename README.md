@@ -137,6 +137,10 @@ application.argoproj.io/myapp-prod configured
 
 Verify:
 $ kubectl get pods -n prod
+NAME                          READY   STATUS    RESTARTS   AGE
+myapp-prod-558f4648f8-lxs57   1/1     Running   0          69s
+myapp-prod-558f4648f8-n9j4w   1/1     Running   0          71s
+myapp-prod-558f4648f8-x6fkn   1/1     Running   0          70s
 
 
 PART 8 — GitOps Reconciliation Demo
@@ -147,10 +151,7 @@ $ git commit -m "scale dev to 2 replicas"
 $ git push origin dev
 
 $ kubectl get pods -n dev
-NAME                              READY   STATUS    RESTARTS      AGE
-app-deployment-77cf88dc74-bvt9g   1/1     Running   4 (89m ago)   22d
-app-deployment-77cf88dc74-dbbwg   1/1     Running   4 (89m ago)   22d
-app-deployment-77cf88dc74-hb4v9   1/1     Running   4 (89m ago)   22d
-app-deployment-77cf88dc74-nl5wv   1/1     Running   4 (89m ago)   22d
-app-deployment-77cf88dc74-sss8w   1/1     Running   4 (89m ago)   22d
+NAME                         READY   STATUS    RESTARTS   AGE
+myapp-dev-6f54bbd4b4-2pmx6   1/1     Running   0          2m22s
+myapp-dev-6f54bbd4b4-7jbkr   1/1     Running   0          2m30s
 
