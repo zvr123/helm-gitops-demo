@@ -9,6 +9,6 @@ service:
   port: 80
 
 serviceAccount:
-  create: true
+  create: false
   name: myapp-dev
 
