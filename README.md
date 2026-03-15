@@ -73,20 +73,27 @@ Create GitHub repository: helm-gitops-demo
 
 **<u>helm-gitops-demo/</u>**
 
-├── charts/
-│ └── myapp/
-│ ├── Chart.yaml
-│ ├── values.yaml
-│ └── templates/
-│ ├── deployment.yaml
-│ └── service.yaml
-├── env/
-│ └── dev/
-│ ├── values-dev.yaml
-│ └── dev-app.yaml
-│ └── prod/
-│ ├── values-prod.yaml
-│ └── prod-app.yaml
+.
+├── charts
+│   └── myapp
+│       ├── Chart.yaml
+│       ├── templates
+│       │   ├── deployment.yaml
+│       │   ├── _helpers.tpl
+│       │   ├── NOTES.txt
+│       │   ├── serviceAccount.yaml
+│       │   └── service.yaml
+│       ├── values-dev.yaml
+│       ├── values-prod.yaml
+│       └── values.yaml
+├── envs
+│   ├── dev
+│   │   ├── dev-app.yaml
+│   │   └── values-dev.yaml
+│   └── prod
+│       ├── prod-app.yaml
+│       └── values-prod.yaml
+└── README.md
   
 
 
