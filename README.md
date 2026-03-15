@@ -70,9 +70,8 @@ Context 'localhost:8080' updated
 
 Create GitHub repository: helm-gitops-demo
 
-
+```
 **<u>helm-gitops-demo/</u>**
-
 .
 ├── charts
 │   └── myapp
@@ -94,7 +93,7 @@ Create GitHub repository: helm-gitops-demo
 │       ├── prod-app.yaml
 │       └── values-prod.yaml
 └── README.md
-  
+```
 
 
 ## Step 5 — Create Helm Chart
