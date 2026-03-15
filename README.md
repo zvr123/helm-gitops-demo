@@ -220,6 +220,15 @@ $ kubectl get pods -n dev
 <mark style="background:#d3f8b6">myapp-dev-6f54bbd4b4-7jbkr 1/1 Running 0 2m30s</mark>
 
 
+## SCREENSOTS
 
+### ArgoCD Dashboard:
 ![ArgoCD App](images/argoCD.png)
 
+
+### DEV namespace PODS:
+![ArgoCD App](images/dev_namespace-pods.png)
+
+
+### PROD namespace PODS:
+![ArgoCD App](images/prod_namespace-pods.png)
