@@ -218,3 +218,8 @@ $ kubectl get pods -n dev
 <mark style="background:#d3f8b6">myapp-dev-6f54bbd4b4-2pmx6 1/1 Running 0 2m22s</mark>
 
 <mark style="background:#d3f8b6">myapp-dev-6f54bbd4b4-7jbkr 1/1 Running 0 2m30s</mark>
+
+
+
+![ArgoCD App](images/argoCD.png)
+
