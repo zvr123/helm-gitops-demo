@@ -82,8 +82,6 @@ Create GitHub repository: helm-gitops-demo
 │       │   ├── NOTES.txt
 │       │   ├── serviceAccount.yaml
 │       │   └── service.yaml
-│       ├── values-dev.yaml
-│       ├── values-prod.yaml
 │       └── values.yaml
 ├── envs
 │   ├── dev
@@ -232,3 +230,9 @@ $ kubectl get pods -n dev
 
 ### PROD namespace PODS:
 ![ArgoCD App](images/prod_namespace-pods.png)
+
+
+
+## Explanation:
+
+### How ArgoCD connects to GitHub:
